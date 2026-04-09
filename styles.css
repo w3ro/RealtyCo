@@ -652,6 +652,26 @@ textarea {
   box-shadow: none;
 }
 
+.process-card__icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.process-card__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: var(--color-highlight);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .process-card p {
   color: rgba(255, 255, 255, 0.7);
 }
