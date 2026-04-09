@@ -108,7 +108,6 @@ textarea {
 .property-card__meta,
 .property-card__specs,
 .market-layout,
-.testimonial-layout,
 .mini-metrics,
 .form-actions {
   display: flex;
@@ -535,6 +534,16 @@ textarea {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.testimonial-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.contact-layout {
+  align-items: center;
+}
+
 .testimonial-layout,
 .contact-layout {
   align-items: center;
@@ -714,7 +723,6 @@ textarea {
   }
 
   .hero__layout,
-  .testimonial-layout,
   .contact-layout {
     grid-template-columns: 1.05fr 0.95fr;
   }
@@ -753,6 +761,12 @@ textarea {
 
   .form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .testimonial-layout {
+    grid-template-columns: 1.05fr 0.95fr;
   }
 }
 
