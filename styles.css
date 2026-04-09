@@ -579,6 +579,7 @@ textarea {
 }
 
 .property-card__media {
+  aspect-ratio: 1 / 1;
   min-height: 16rem;
 }
 
