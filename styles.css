@@ -9,6 +9,9 @@
   --color-accent: #1abc9c;
   --color-accent-deep: #12957d;
   --color-accent-soft: #dff7f1;
+  --color-secondary: #ffb84d;
+  --color-secondary-deep: #e39a2d;
+  --color-secondary-soft: #fff1d9;
   --color-highlight: #ffb84d;
   --color-success: #178f66;
   --shadow-soft: 0 16px 40px rgba(16, 42, 44, 0.08);
@@ -183,40 +186,170 @@ textarea {
 }
 
 .button {
+  --button-bg: var(--color-ink-900);
+  --button-border: var(--color-ink-900);
+  --button-text: var(--color-white);
+  --button-hover-bg: var(--color-ink-700);
+  --button-hover-border: var(--color-ink-700);
+  --button-hover-text: var(--color-white);
+  --button-active-bg: #0a1d1f;
+  --button-active-border: #0a1d1f;
+  --button-active-text: var(--color-white);
+  --button-focus-ring: rgba(16, 42, 44, 0.18);
+  --button-disabled-bg: rgba(102, 131, 136, 0.18);
+  --button-disabled-border: rgba(102, 131, 136, 0.18);
+  --button-disabled-text: rgba(16, 42, 44, 0.42);
   display: inline-flex;
   justify-content: center;
   align-items: center;
   min-height: 3rem;
   padding-inline: 1.15rem;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--button-border);
+  background: var(--button-bg);
+  color: var(--button-text);
   font-weight: 700;
+  cursor: pointer;
   transition:
     transform var(--transition),
     background var(--transition),
     color var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.button:hover {
+  background: var(--button-hover-bg);
+  border-color: var(--button-hover-border);
+  color: var(--button-hover-text);
 }
 
 .button:hover,
-.button:focus-visible {
+.button:focus-visible,
+.button:active {
   transform: translateY(-1px);
 }
 
-.button--dark {
-  background: var(--color-ink-900);
-  color: var(--color-white);
+.button:active,
+.button.is-active {
+  background: var(--button-active-bg);
+  border-color: var(--button-active-border);
+  color: var(--button-active-text);
+  transform: translateY(0);
 }
 
+.button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem var(--button-focus-ring);
+}
+
+.button:disabled,
+.button.is-disabled,
+.button[aria-disabled="true"] {
+  background: var(--button-disabled-bg);
+  border-color: var(--button-disabled-border);
+  color: var(--button-disabled-text);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+  pointer-events: none;
+  transform: none;
+}
+
+.button--primary,
 .button--accent {
-  background: var(--color-accent);
-  color: var(--color-white);
+  --button-bg: var(--color-accent);
+  --button-border: var(--color-accent);
+  --button-text: var(--color-white);
+  --button-hover-bg: var(--color-accent-deep);
+  --button-hover-border: var(--color-accent-deep);
+  --button-hover-text: var(--color-white);
+  --button-active-bg: #0f7e69;
+  --button-active-border: #0f7e69;
+  --button-active-text: var(--color-white);
+  --button-focus-ring: rgba(26, 188, 156, 0.22);
+  --button-disabled-bg: rgba(26, 188, 156, 0.16);
+  --button-disabled-border: rgba(26, 188, 156, 0.16);
+  --button-disabled-text: rgba(18, 149, 125, 0.54);
 }
 
+.button--secondary {
+  --button-bg: var(--color-secondary);
+  --button-border: var(--color-secondary);
+  --button-text: var(--color-ink-900);
+  --button-hover-bg: var(--color-secondary-deep);
+  --button-hover-border: var(--color-secondary-deep);
+  --button-hover-text: var(--color-ink-900);
+  --button-active-bg: #c9831d;
+  --button-active-border: #c9831d;
+  --button-active-text: var(--color-ink-900);
+  --button-focus-ring: rgba(255, 184, 77, 0.24);
+  --button-disabled-bg: rgba(255, 184, 77, 0.18);
+  --button-disabled-border: rgba(255, 184, 77, 0.18);
+  --button-disabled-text: rgba(16, 42, 44, 0.44);
+}
+
+.button--dark {
+  --button-bg: var(--color-ink-900);
+  --button-border: var(--color-ink-900);
+  --button-text: var(--color-white);
+  --button-hover-bg: var(--color-ink-700);
+  --button-hover-border: var(--color-ink-700);
+  --button-hover-text: var(--color-white);
+  --button-active-bg: #091819;
+  --button-active-border: #091819;
+  --button-active-text: var(--color-white);
+  --button-focus-ring: rgba(16, 42, 44, 0.2);
+}
+
+.button--light {
+  --button-bg: var(--color-white);
+  --button-border: rgba(252, 255, 254, 0.88);
+  --button-text: var(--color-ink-900);
+  --button-hover-bg: rgba(252, 255, 254, 0.84);
+  --button-hover-border: rgba(252, 255, 254, 0.84);
+  --button-hover-text: var(--color-ink-900);
+  --button-active-bg: rgba(223, 247, 241, 0.92);
+  --button-active-border: rgba(223, 247, 241, 0.92);
+  --button-active-text: var(--color-ink-900);
+  --button-focus-ring: rgba(252, 255, 254, 0.22);
+  --button-disabled-bg: rgba(252, 255, 254, 0.18);
+  --button-disabled-border: rgba(252, 255, 254, 0.18);
+  --button-disabled-text: rgba(252, 255, 254, 0.56);
+}
+
+.button--neutral,
 .button--ghost {
-  border-color: rgba(16, 42, 44, 0.12);
-  color: var(--color-ink-900);
-  background: rgba(255, 255, 255, 0.82);
+  --button-bg: rgba(255, 255, 255, 0.82);
+  --button-border: rgba(16, 42, 44, 0.12);
+  --button-text: var(--color-ink-900);
+  --button-hover-bg: var(--color-accent-soft);
+  --button-hover-border: rgba(26, 188, 156, 0.28);
+  --button-hover-text: var(--color-accent-deep);
+  --button-active-bg: rgba(26, 188, 156, 0.14);
+  --button-active-border: rgba(26, 188, 156, 0.32);
+  --button-active-text: var(--color-accent-deep);
+  --button-focus-ring: rgba(26, 188, 156, 0.18);
+  --button-disabled-bg: rgba(102, 131, 136, 0.08);
+  --button-disabled-border: rgba(102, 131, 136, 0.12);
+  --button-disabled-text: rgba(16, 42, 44, 0.36);
+}
+
+.section--dark .button--neutral,
+.section--dark .button--ghost {
+  --button-bg: rgba(252, 255, 254, 0.12);
+  --button-border: rgba(252, 255, 254, 0.16);
+  --button-text: var(--color-white);
+  --button-hover-bg: rgba(252, 255, 254, 0.2);
+  --button-hover-border: rgba(252, 255, 254, 0.24);
+  --button-hover-text: var(--color-white);
+  --button-active-bg: rgba(252, 255, 254, 0.26);
+  --button-active-border: rgba(252, 255, 254, 0.3);
+  --button-active-text: var(--color-white);
+  --button-focus-ring: rgba(252, 255, 254, 0.16);
+  --button-disabled-bg: rgba(252, 255, 254, 0.08);
+  --button-disabled-border: rgba(252, 255, 254, 0.08);
+  --button-disabled-text: rgba(252, 255, 254, 0.42);
 }
 
 .eyebrow {
