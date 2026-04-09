@@ -130,29 +130,15 @@ textarea {
   gap: var(--space-sm);
 }
 
-.brand__mark {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  aspect-ratio: 1;
-  border-radius: 999px;
-  background: var(--color-ink-900);
-  color: var(--color-white);
-  font-weight: 800;
+.brand__logo {
+  width: clamp(10rem, 18vw, 13.5rem);
+  height: auto;
+  object-fit: contain;
 }
 
-.brand__text {
-  display: grid;
-  line-height: 1;
-}
-
-.brand__text strong {
-  font-size: 0.98rem;
-}
-
-.brand__text small {
-  color: var(--color-ink-500);
-  margin-top: 0.2rem;
+.brand__logo--footer {
+  width: clamp(10.5rem, 20vw, 14rem);
+  filter: brightness(0) invert(1);
 }
 
 .site-nav {
@@ -935,6 +921,10 @@ textarea {
 
   .nav-toggle {
     display: inline-block;
+  }
+
+  .brand__logo {
+    width: clamp(8.5rem, 42vw, 11.5rem);
   }
 
   .nav-toggle.is-open span:first-child {
