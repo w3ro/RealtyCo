@@ -83,13 +83,16 @@ if (contactForm && feedback) {
     const formData = new FormData(contactForm);
     const nombre = String(formData.get("nombre") || "").trim();
     const email = String(formData.get("email") || "").trim();
+    const telefono = String(formData.get("telefono") || "").trim();
     const interes = String(formData.get("interes") || "").trim();
     const zona = String(formData.get("zona") || "").trim();
     const mensaje = String(formData.get("mensaje") || "").trim();
 
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const telefonoNormalizado = telefono.replace(/[^\d+]/g, "");
+    const telefonoValido = /^[+]?\d{10,15}$/.test(telefonoNormalizado);
 
-    if (!nombre || !email || !interes || !zona || !mensaje) {
+    if (!nombre || !email || !telefono || !interes || !zona || !mensaje) {
       feedback.textContent = "Completa todos los campos para continuar.";
       feedback.classList.add("is-error");
       feedback.classList.remove("is-success");
@@ -98,6 +101,13 @@ if (contactForm && feedback) {
 
     if (!emailValido) {
       feedback.textContent = "Escribe un correo electronico valido.";
+      feedback.classList.add("is-error");
+      feedback.classList.remove("is-success");
+      return;
+    }
+
+    if (!telefonoValido) {
+      feedback.textContent = "Escribe un numero telefonico valido.";
       feedback.classList.add("is-error");
       feedback.classList.remove("is-success");
       return;
