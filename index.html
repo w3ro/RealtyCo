@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RealtyCo Mexico | Invierte y vive mejor en Mexico</title>
+    <meta
+      name="description"
+      content="Landing page inmobiliaria para descubrir, invertir y mudarte a las zonas con mayor plusvalia en Mexico."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="site-header">
+        <div class="container">
+          <div class="nav-bar">
+            <a class="brand" href="#inicio" aria-label="RealtyCo Mexico inicio">
+              <span class="brand__mark">RC</span>
+              <span class="brand__text">
+                <strong>RealtyCo</strong>
+                <small>Mexico</small>
+              </span>
+            </a>
+
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-menu"
+              data-nav-toggle
+            >
+              <span></span>
+              <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-menu" data-nav-menu>
+              <a href="#propiedades">Propiedades</a>
+              <a href="#zonas">Zonas</a>
+              <a href="#proceso">Proceso</a>
+              <a href="#testimonios">Historias</a>
+              <a href="#contacto" class="button button--dark">Agendar llamada</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main id="inicio">
+        <section class="section hero">
+          <div class="container">
+            <div class="hero__layout">
+              <div class="hero__content">
+                <p class="eyebrow">Bienes raices premium en Mexico</p>
+                <h1 class="display-title">
+                  Encuentra propiedad, plusvalia y estilo de vida en una sola
+                  experiencia.
+                </h1>
+                <p class="hero__lead">
+                  Diseñamos una ruta clara para comprar, invertir o vender en
+                  Ciudad de Mexico, Riviera Maya, Merida y Los Cabos con
+                  acompañamiento integral.
+                </p>
+
+                <div class="hero__actions">
+                  <a class="button button--accent" href="#contacto">Quiero asesoría</a>
+                  <a class="button button--ghost" href="#propiedades">Ver oportunidades</a>
+                </div>
+
+                <div class="hero__stats" aria-label="Metricas principales">
+                  <article class="stat-card">
+                    <span class="stat-card__value" data-count="128">0</span>
+                    <span class="stat-card__label">operaciones cerradas en 2025</span>
+                  </article>
+                  <article class="stat-card">
+                    <span class="stat-card__value" data-count="17">0</span>
+                    <span class="stat-card__label">% promedio de plusvalia anual</span>
+                  </article>
+                  <article class="stat-card">
+                    <span class="stat-card__value" data-count="9">0</span>
+                    <span class="stat-card__label">dias para perfilar opciones</span>
+                  </article>
+                </div>
+              </div>
+
+              <div class="hero__media">
+                <figure class="hero-card hero-card--main">
+                  <img
+                    src="assets/images/hero-architecture.jpg"
+                    alt="Arquitectura contemporanea con fachada de madera y cielo turquesa"
+                  />
+                  <figcaption>
+                    Arquitectura contemporanea para desarrollos de alto valor.
+                  </figcaption>
+                </figure>
+
+                <aside class="hero-panel">
+                  <div class="hero-panel__chip">Client-First</div>
+                  <h2>Invertir en Mexico sin friccion</h2>
+                  <p>
+                    Curaduria de inventario, analisis de zona y acompañamiento
+                    comercial en un flujo simple y transparente.
+                  </p>
+                  <ul class="feature-list">
+                    <li>Perfilamiento segun presupuesto y objetivo</li>
+                    <li>Comparativo de zonas y rendimiento esperado</li>
+                    <li>Agenda de visitas fisicas o virtuales</li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section trust-strip">
+          <div class="container">
+            <div class="trust-strip__grid">
+              <p>Asesoria enfocada en compra patrimonial, renta vacacional y relocation ejecutivo.</p>
+              <div class="trust-strip__badges">
+                <span>CDMX</span>
+                <span>Riviera Maya</span>
+                <span>Merida</span>
+                <span>Los Cabos</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--soft" id="propiedades">
+          <div class="container">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Propiedades destacadas</p>
+                <h2 class="section-title">
+                  Seleccion inteligente para vivir o invertir en mercados con
+                  movimiento real.
+                </h2>
+              </div>
+
+              <div class="filter-group" role="tablist" aria-label="Filtro de propiedades">
+                <button class="filter-chip is-active" type="button" data-filter="all">Todas</button>
+                <button class="filter-chip" type="button" data-filter="inversion">Inversion</button>
+                <button class="filter-chip" type="button" data-filter="familiar">Familiar</button>
+                <button class="filter-chip" type="button" data-filter="premium">Premium</button>
+              </div>
+            </div>
+
+            <div class="property-grid">
+              <article class="property-card" data-category="premium inversion">
+                <div class="property-card__media">
+                  <img
+                    src="assets/images/hero-architecture.jpg"
+                    alt="Detalle exterior de arquitectura de lujo"
+                  />
+                </div>
+                <div class="property-card__body">
+                  <div class="property-card__meta">
+                    <span>Polanco, CDMX</span>
+                    <strong>Desde $12.8 M MXN</strong>
+                  </div>
+                  <h3>Residencias urbanas con retorno por renta ejecutiva</h3>
+                  <p>
+                    Ubicacion premium, acabados sobrios y conectividad inmediata
+                    con corredores corporativos.
+                  </p>
+                  <ul class="property-card__specs">
+                    <li>2-3 recamaras</li>
+                    <li>90-180 m2</li>
+                    <li>Roof lounge</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="property-card" data-category="familiar">
+                <div class="property-card__media">
+                  <img
+                    src="assets/images/lifestyle-family.jpg"
+                    alt="Familia conviviendo en una sala luminosa"
+                  />
+                </div>
+                <div class="property-card__body">
+                  <div class="property-card__meta">
+                    <span>Merida Norte</span>
+                    <strong>Desde $4.9 M MXN</strong>
+                  </div>
+                  <h3>Casas pensadas para una vida tranquila y conectada</h3>
+                  <p>
+                    Desarrollos con amenidades, seguridad y cercania a colegios,
+                    hospitales y servicios clave.
+                  </p>
+                  <ul class="property-card__specs">
+                    <li>3 recamaras</li>
+                    <li>Jardin privado</li>
+                    <li>Casa club</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="property-card" data-category="inversion premium">
+                <div class="property-card__media">
+                  <img
+                    src="assets/images/lifestyle-consulting.jpg"
+                    alt="Pareja recibiendo asesoria inmobiliaria en un espacio lleno de vegetacion"
+                  />
+                </div>
+                <div class="property-card__body">
+                  <div class="property-card__meta">
+                    <span>Tulum Region 15</span>
+                    <strong>Desde $3.6 M MXN</strong>
+                  </div>
+                  <h3>Unidades para renta vacacional con operacion flexible</h3>
+                  <p>
+                    Producto enfocado en inversion patrimonial con alta demanda
+                    internacional y administracion opcional.
+                  </p>
+                  <ul class="property-card__specs">
+                    <li>1-2 recamaras</li>
+                    <li>Lock-off</li>
+                    <li>Wellness amenities</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="zonas">
+          <div class="container">
+            <div class="market-layout">
+              <div class="market-copy">
+                <p class="eyebrow">Zonas con traccion</p>
+                <h2 class="section-title">
+                  Leemos el mercado mexicano con criterios de patrimonio, uso y
+                  liquidez.
+                </h2>
+                <p>
+                  No mostramos inventario por volumen. Priorizamos ubicaciones
+                  que sostienen demanda, conectividad y narrativa de marca para
+                  que cada decision tenga claridad comercial.
+                </p>
+              </div>
+
+              <div class="market-grid">
+                <article class="market-card">
+                  <span class="market-card__index">01</span>
+                  <h3>Ciudad de Mexico</h3>
+                  <p>Liquidez alta, renta ejecutiva y mezcla de ticket patrimonial.</p>
+                </article>
+                <article class="market-card">
+                  <span class="market-card__index">02</span>
+                  <h3>Riviera Maya</h3>
+                  <p>Demanda internacional, turismo activo y formatos flexibles para inversion.</p>
+                </article>
+                <article class="market-card">
+                  <span class="market-card__index">03</span>
+                  <h3>Merida</h3>
+                  <p>Crecimiento sostenido, infraestructura y vida familiar con valor futuro.</p>
+                </article>
+                <article class="market-card">
+                  <span class="market-card__index">04</span>
+                  <h3>Los Cabos</h3>
+                  <p>Segmento premium, producto de lujo y alto interes internacional.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--dark" id="proceso">
+          <div class="container">
+            <div class="section-heading section-heading--stacked">
+              <p class="eyebrow eyebrow--light">Proceso</p>
+              <h2 class="section-title section-title--light">
+                Un recorrido comercial claro desde el primer contacto hasta la
+                firma.
+              </h2>
+            </div>
+
+            <div class="process-grid">
+              <article class="process-card">
+                <span>01</span>
+                <h3>Briefing estrategico</h3>
+                <p>Definimos presupuesto, objetivo y horizonte para filtrar opciones reales.</p>
+              </article>
+              <article class="process-card">
+                <span>02</span>
+                <h3>Curaduria de inventario</h3>
+                <p>Entregamos una terna priorizada con comparativos y argumentos de valor.</p>
+              </article>
+              <article class="process-card">
+                <span>03</span>
+                <h3>Visitas y negociacion</h3>
+                <p>Coordinamos agenda, resolvemos dudas y acompañamos la etapa comercial.</p>
+              </article>
+              <article class="process-card">
+                <span>04</span>
+                <h3>Cierre con seguimiento</h3>
+                <p>Integramos acompanamiento documental y ruta para ocupacion o renta.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--soft" id="testimonios">
+          <div class="container">
+            <div class="testimonial-layout">
+              <div class="testimonial-media">
+                <img
+                  src="assets/images/lifestyle-consulting.jpg"
+                  alt="Clientes conversando en un espacio residencial con vegetacion"
+                />
+              </div>
+              <div class="testimonial-copy">
+                <p class="eyebrow">Historias reales</p>
+                <blockquote class="quote">
+                  “Pasamos de ver decenas de opciones sin orden a cerrar una
+                  compra en Merida con argumentos claros de valor y uso
+                  familiar.”
+                </blockquote>
+                <p class="quote__author">Lucia y Arturo, compradores patrimoniales</p>
+
+                <div class="mini-metrics">
+                  <div>
+                    <strong>+34%</strong>
+                    <span>consultas desde mobile</span>
+                  </div>
+                  <div>
+                    <strong>4.9/5</strong>
+                    <span>satisfaccion reportada</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact" id="contacto">
+          <div class="container">
+            <div class="contact-layout">
+              <div class="contact-copy">
+                <p class="eyebrow">Contacto</p>
+                <h2 class="section-title">
+                  Cuéntanos qué buscas y te devolvemos una ruta accionable.
+                </h2>
+                <p>
+                  Este formulario realiza validacion en cliente para agilizar la
+                  captura. No envía datos a servidor, pero deja lista la base
+                  para integrarlo con CRM o backend seguro.
+                </p>
+              </div>
+
+              <form class="contact-form" data-contact-form novalidate>
+                <div class="form-grid">
+                  <label class="field">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required />
+                  </label>
+                  <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="nombre@correo.com" required />
+                  </label>
+                  <label class="field">
+                    <span>Interes</span>
+                    <select name="interes" required>
+                      <option value="">Selecciona una opcion</option>
+                      <option value="comprar">Comprar</option>
+                      <option value="invertir">Invertir</option>
+                      <option value="vender">Vender</option>
+                    </select>
+                  </label>
+                  <label class="field">
+                    <span>Zona</span>
+                    <select name="zona" required>
+                      <option value="">Selecciona una zona</option>
+                      <option value="cdmx">Ciudad de Mexico</option>
+                      <option value="riviera">Riviera Maya</option>
+                      <option value="merida">Merida</option>
+                      <option value="cabos">Los Cabos</option>
+                    </select>
+                  </label>
+                  <label class="field field--full">
+                    <span>Objetivo</span>
+                    <textarea
+                      name="mensaje"
+                      rows="4"
+                      placeholder="Cuéntanos presupuesto aproximado, ciudad y tipo de propiedad."
+                      required
+                    ></textarea>
+                  </label>
+                </div>
+
+                <div class="form-actions">
+                  <button class="button button--dark" type="submit">Enviar solicitud</button>
+                  <p class="form-feedback" data-form-feedback aria-live="polite"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
