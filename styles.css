@@ -353,9 +353,10 @@ textarea {
 .display-title,
 .section-title {
   margin: 0;
-  font-family: "Bree Serif", serif;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
 }
 
 .display-title {
@@ -694,9 +695,10 @@ textarea {
 
 .quote {
   margin: 0;
-  font-family: "Bree Serif", serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
-  line-height: 1.18;
+  line-height: 1.22;
 }
 
 .quote__author {
